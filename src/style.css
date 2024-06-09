@@ -1,0 +1,211 @@
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #222;
+  line-height: 1.25;
+  background: #fff;
+  padding: 32px;
+}
+
+/* Dark mode styles */
+.fake-dark-mode {
+  filter: invert(100%);
+  transition: all 0.5s;
+}
+
+.btn-fake-dark-mode {
+  width: fit-content;
+  position: fixed;
+  display: flex;
+  align-items: flex-start;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  line-height: 1;
+  font-size: 26px;
+  background-color: transparent;
+  border: none;
+}
+
+.btn-fake-dark-mode:focus {
+  outline: none;
+}
+
+/* Container section */
+section {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* Add padding to the sides for better spacing on larger screens */
+}
+
+/* Header styles */
+header {
+  margin-bottom: 32px;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow header content to wrap on smaller screens */
+  justify-content: space-around;
+}
+
+.searchbar {
+  width: 200px;
+}
+
+h1 {
+  font-size: 26px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+h1 span {
+  font-size: 140%;
+  line-height: 1;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+h3 {
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+header button {
+  font-size: 14px;
+}
+
+/* Form styles */
+form {
+  padding: 24px;
+  background-color: #fff4e6;
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow form elements to wrap on smaller screens */
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+input {
+  font-size: 16px;
+  padding: 8px 12px;
+  border: 1px solid #ffe8cc;
+  font-family: inherit;
+  color: inherit;
+  width: calc(50% - 12px);
+  /* Make inputs 50% width with a gap of 24px */
+}
+
+textarea {
+  flex: 1;
+  height: 50px;
+}
+
+button {
+  border: 1px solid #ffa94d;
+  background-color: #ffa94d;
+  font-weight: 700;
+  padding: 9px 24px;
+  cursor: pointer;
+  width: 100%;
+  /* Make button full width on smaller screens */
+}
+
+/* Main content styles */
+main {
+  margin-bottom: 40px;
+}
+
+main ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Responsive grid */
+  gap: 32px;
+}
+
+main li {
+  border: 1px solid #ffe8cc;
+  padding: 16px 20px;
+}
+
+main li:hover {
+  background-color: #fff4e6;
+}
+
+/* Sidebar styles */
+aside {
+  margin-bottom: 40px;
+  opacity: 75%;
+}
+
+aside ul {
+  font-size: 90%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+aside li {
+  border: 1px solid #ffe8cc;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Responsive margin for heading and button */
+h2+button {
+  margin-bottom: 24px;
+}
+
+/* Media Query for Mobile View */
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+    /* Reduce body padding for smaller screens */
+  }
+
+  section {
+    padding: 0 10px;
+    /* Adjust section padding for smaller screens */
+  }
+
+  header div {
+    flex-direction: column;
+    /* Stack header elements vertically on smaller screens */
+    gap: 16px;
+    /* Add vertical gap between header elements */
+  }
+
+  form {
+    flex-direction: column;
+    /* Stack form elements vertically on smaller screens */
+  }
+
+  input {
+    width: 100%;
+    /* Make inputs full width on smaller screens */
+  }
+}
